@@ -101,4 +101,4 @@ Week 2 strengthened my understanding of data preprocessing, categorical data cle
 ---
 
 **Author:** Dinesh Kumar Pulagalla  
-**GitHub:** https://github.com/dk0009-pv
+**GitHub:** https://github.com/dk0009-pv/StudentScope-Student-Performance-Analysis/tree/main/Week-2-Data-Cleaning
