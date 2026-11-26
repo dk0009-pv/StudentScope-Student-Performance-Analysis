@@ -1,121 +1,20 @@
-# 📊 StudentScope – Student Performance Analysis
+# StudentScope — Week 3: Statistical Analysis and Machine Learning
 
-### SkillMe Data Science Virtual Internship · Week 1 · Exploratory Data Analysis (EDA)
+Continuation of StudentScope Weeks 1–2 using the supplied UCI Student Performance Portuguese-course dataset (649 students).
 
-**Author:** Dinesh Kumar Pulagalla
+## Run
+- Local: install `pip install -r requirements.txt`, open `StudentScope_Week3.ipynb` from this folder in Jupyter or VS Code and run all cells.
+- Colab: upload the notebook, select Runtime → Run all, then upload `data/student-por.csv` when prompted. The notebook creates the cleaned dataset and outputs automatically. Download the executed notebook and outputs before the runtime resets.
 
----
+## Method
+Reproduce Week 2 cleaning, compare final grades by study-time category, run Welch's t-test, predict grade bands using five non-grade features, fit a preprocessing pipeline and Logistic Regression on an 80% stratified training split, and evaluate on the remaining 20%. Random Forest is included as an optional comparison. The 10/20 threshold is an analytical choice. No G1, G2 or G3 is used as a predictor.
 
-## 📌 About the Project
+## Results
+See [executed notebook](StudentScope_Week3.ipynb), [results](outputs/RESULTS.md), [classification report](outputs/classification_report.csv) and [model comparison](outputs/model_comparison.csv).
 
-StudentScope is an Exploratory Data Analysis (EDA) project developed as part of the **SkillMe Data Science Virtual Internship – Week 1**.
+![Grade distribution](outputs/01_studytime_grade_distribution.png)
+![Confusion matrix](outputs/02_grade_confusion_matrix.png)
+![Class metrics](outputs/03_grade_classification_metrics.png)
 
-This project explores the UCI Student Performance dataset to understand student backgrounds, study habits, school-related factors, and academic performance using Python data analysis libraries.
-
-The objective is to develop practical skills in data loading, data inspection, categorical analysis, missing-value detection, grouping, and data visualization.
-
-## 🎯 Project Objectives
-
-- Load a public dataset using Pandas.
-- Understand dataset structure and data types.
-- Analyse categorical variables and response distributions.
-- Identify missing values.
-- Compare academic performance using GroupBy operations.
-- Create meaningful charts and visualizations.
-- Extract insights from student performance data.
-
-## 📂 Dataset
-
-**Dataset:** UCI Student Performance – Portuguese Language Course (`student-por.csv`)
-
-**Source:** [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/320/student+performance)
-
-- Total Records: 649
-- Original Columns: 33
-- Target Variable: `G3` (Final Grade)
-
-## 🛠️ Technologies Used
-
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- Google Colab / Jupyter Notebook
-
-## 🔍 Analysis Performed
-
-1. **Data Loading:** Imported the CSV dataset using `pandas.read_csv()`.
-2. **Data Inspection:** Used `.head()`, `.info()`, and `.describe()`.
-3. **Categorical Analysis:** Explored school, sex, address, internet access, and family size.
-4. **Missing Value Analysis:** Used `.isnull().sum()` to identify missing data.
-5. **GroupBy Analysis:** Compared average final grades across study-time categories.
-6. **Data Visualization:** Created bar charts, box plots, and histograms.
-7. **Heatmap Analysis:** Explored the relationship between internet access and final-grade categories.
-
-## 📊 Key Findings
-
-- The dataset contains 649 student records.
-- The dataset has 33 original columns.
-- The average final grade is approximately 11.91 out of 20.
-- No missing values were found in the dataset.
-- Students in different study-time categories showed differences in average final grades.
-
-## 📁 Repository Structure
-
-```text
-StudentScope-Student-Performance-Analysis/
-│
-├── StudentScope_Week1.ipynb
-├── README.md
-└── student-por.csv
-```
-
-## ▶️ How to Run
-
-1. Clone this repository:
-
-   ```bash
-   git clone https://github.com/dk0009-pv/StudentScope-Student-Performance-Analysis.git
-   ```
-
-2. Open the notebook in Google Colab or Jupyter Notebook.
-
-3. Install the required libraries if needed:
-
-   ```bash
-   pip install pandas numpy matplotlib seaborn
-   ```
-
-4. Download `student-por.csv` from the UCI dataset source.
-
-5. Upload the CSV file when prompted by the notebook.
-
-6. Run all cells to reproduce the analysis and visualizations.
-
-## 📚 Learning Outcomes
-
-Through this project, I practised:
-
-- Exploratory Data Analysis using Pandas.
-- Working with real-world public datasets.
-- Handling and inspecting missing data.
-- Grouping and summarising data.
-- Creating visualizations with Matplotlib and Seaborn.
-- Communicating insights from data.
-
-## 👨‍💻 Author
-
-**Dinesh Kumar Pulagalla**
-
----
-
-### 🏅 Internship
-
-**SkillMe Data Science Virtual Internship**
-
-**Week 1:** Exploratory Data Analysis (EDA)
-
----
-
-*Learning, analysing, and building with data! 🚀*
+## Source and limitations
+[UCI Student Performance dataset](https://archive.ics.uci.edu/dataset/320/student+performance). Supplied `student-por.csv` retained unchanged; cleaned CSV is generated by the notebook. Results are associations in two Portuguese schools, not causal conclusions or a validated student decision system.
