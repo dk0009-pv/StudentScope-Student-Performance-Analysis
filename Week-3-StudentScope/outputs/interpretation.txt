@@ -1,0 +1,1 @@
+Logistic Regression correctly classified 109 of 130 test students (83.85%), compared with a majority baseline of 84.62%. It struggled most with Below 10, whose recall was 0.00%. The confusion matrix shows 0 correctly identified and 20 misclassified students in that band. The model is an educational baseline, not a reliable tool for high-stakes decisions about students.
