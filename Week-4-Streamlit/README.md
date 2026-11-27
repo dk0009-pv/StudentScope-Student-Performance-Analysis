@@ -49,10 +49,6 @@ To inspect the calculation notebook, open `StudentScope_Week4_Dashboard.ipynb` i
 
 The five model features are studytime, failures, traveltime, internet and Mjob_group. The train/test split is stratified (80/20, random_state=42; 519/130). Scaling and encoding are fitted on training data only; G1, G2 and G3 are excluded from predictors. The model is recreated using the Week 3 pipeline rather than trained on filtered subsets. The high apparent accuracy masks poor performance on the minority category; the model is only an educational baseline.
 
-![Week 3 grade distribution](outputs/01_studytime_grade_distribution.png)
-![Week 3 confusion matrix](outputs/02_grade_confusion_matrix.png)
-![Week 4 filter validation](outputs/04_filter_validation.png)
-
 ## Dashboard guide
 
 **Explore grades:** use the sidebar school (GP/MS), address type (urban/rural), and internet (yes/no) multiselect filters. The charts, summary cards and CSV export use the current selection. Empty selections show a warning instead of misleading averages.
